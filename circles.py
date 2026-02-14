@@ -52,7 +52,7 @@ def volumeCalculation(israd,measurement):
     return ans
 
 # Asks for either a radius or perimeter
-def Radius_or_Diameter_Meaasurements():
+def Radius_or_Diameter_Measurements():
     selection = []
     ans = input("\33[1;3;4m///Measurement///\33[0m\nRadius \033[1;33m(r)\033[0m \nDiameter \033[1;33m(d)\033[0m\n")
 
@@ -79,6 +79,8 @@ def circumference_Area_Volume_Calculation(selection:list) -> list | int:
     RorP = selection[0]
     measurement = selection[1]
 
+    israd = False
+
     match RorP:
         case "r":
             israd = True
@@ -102,7 +104,7 @@ def circumference_Area_Volume_Calculation(selection:list) -> list | int:
 # Code execution
 while isloop:
 
-    radius_or_Diameter = Radius_or_Perimeter_Meaasurements()
+    radius_or_Diameter = Radius_or_Diameter_Measurements()
 
     circumference_Area_Volume_Calculation(radius_or_Diameter)
              
