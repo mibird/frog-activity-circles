@@ -52,15 +52,15 @@ def volumeCalculation(israd,measurement):
     return ans
 
 # Asks for either a radius or perimeter
-def Radius_or_Perimeter_Meaasurements():
+def Radius_or_Diameter_Meaasurements():
     selection = []
-    ans = input("\33[1;3;4m///Measurement///\33[0m\nRadius \033[1;33m(r)\033[0m \nPerimeter \033[1;33m(p)\033[0m\n")
+    ans = input("\33[1;3;4m///Measurement///\33[0m\nRadius \033[1;33m(r)\033[0m \nDiameter \033[1;33m(d)\033[0m\n")
 
     if ans  == "r":
         measurement = input("Enter radius:")
         measurement = float(measurement)
-    elif ans == "p":
-        measurement = input("Enter perimeter:")
+    elif ans == "d":
+        measurement = input("Enter diameter:")
         measurement = float(measurement)
     else:
         return 0
@@ -102,9 +102,9 @@ def circumference_Area_Volume_Calculation(selection:list) -> list | int:
 # Code execution
 while isloop:
 
-    radius_or_Perimeter = Radius_or_Perimeter_Meaasurements()
+    radius_or_Diameter = Radius_or_Perimeter_Meaasurements()
 
-    circumference_Area_Volume_Calculation(radius_or_Perimeter)
+    circumference_Area_Volume_Calculation(radius_or_Diameter)
              
     print("\n\n press Enter to proceed; 'exit' to quit")
     if input() == "exit":
